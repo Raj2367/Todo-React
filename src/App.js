@@ -6,7 +6,10 @@ import Layout from "./component/Layout";
 class App extends React.Component {
   
   render(){
-    return (          
+    return (  
+        /**
+         * All components display here
+         */
         <Layout/>             
     );
   }
