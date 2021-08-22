@@ -4,6 +4,8 @@ import Table from "./Table";
 import CompletedTask from "./CompletedTask";
 import Form from "./Form";
 
+import '../css/Login.css';
+
 class Login extends React.Component {
   constructor() {
     super();

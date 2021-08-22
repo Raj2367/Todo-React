@@ -1,0 +1,17 @@
+#markAsComplete{
+    background-color: rgb(0, 167, 0);
+    color: white;
+}
+#markAsComplete:hover{
+    background-color: rgb(4, 134, 4);
+    color: white;
+}
+
+#delete{
+    background-color: rgb(199, 67, 15);
+    color: white;
+}
+#delete:hover{
+    background-color: rgb(240, 56, 24);
+    color: white;
+}
