@@ -1,6 +1,11 @@
 # Simpli-Todo
 Todo listing website where people can list their tasks.
 
+## Link to repo
+```bash
+https://github.com/pruthwirajsimplilearn/Todo-React
+```
+
 ### Prerequisite
 1. node
 2. npm (node package manager)
