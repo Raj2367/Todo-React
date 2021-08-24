@@ -65,15 +65,15 @@ class Login extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        <br />
+    const condition=this.props.darkmode;
+    return (      
         <div className="container">
-          <div className="text-center">
+          <br/>
+          <div className="text-center" {...(condition?{style:{color:"white"}}:{style:{color:"black"}})}>
             {/** Header */}
             <h1>Todo List</h1><hr />  
           </div>
-          <h4>Enter your task:</h4>
+          <h4 {...(condition?{style:{color:"white"}}:{style:{color:"black"}})}>Enter your task:</h4>
           {/** 
            * Form component for enter your task 
            */}
@@ -81,6 +81,7 @@ class Login extends React.Component {
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
             newTask={this.state.task}
+            darkmode={this.props.darkmode}
           />
           <br />
           <div className="row">
@@ -103,7 +104,6 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }

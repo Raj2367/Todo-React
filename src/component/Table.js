@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../css/Table.css";
+// import "../css/Table.css";
 
 class Table extends React.Component {
 
@@ -50,10 +50,18 @@ class Table extends React.Component {
                                 <tr key={index}>
                                     <td>{item.task}</td>
                                     <td>
-                                        <button id="markAsComplete" className="btn btn-outline-success" onClick={this.handleCompletedTask(index)}>Mark as Complete</button>
+                                        <button id="markAsComplete" 
+                                            className="btn btn-success" 
+                                            onClick={this.handleCompletedTask(index)}>
+                                            Mark as Complete
+                                        </button>
                                     </td>
                                     <td>
-                                        <button id="delete" className="btn btn-outline-danger" onClick={this.deleteTask(index)}>Delete</button>
+                                        <button id="delete" 
+                                            className="btn btn-danger" 
+                                            onClick={this.deleteTask(index)}>
+                                            Delete
+                                        </button>
                                     </td>
                                 </tr>
                             );
