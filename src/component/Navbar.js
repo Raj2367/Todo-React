@@ -12,7 +12,8 @@ export class Navbar extends React.Component {
                 {isAuth() ?
                     <nav className="navbar navbar-expand-lg">
                         <div className="container-fluid">
-                            <img className="img-thumbnail" src="companyLogo.png" />
+                            <img className="img-thumbnail" src="companyLogo.png" 
+                                 style={{width:"20%",display:"block",marginLeft:"auto",marginRight:"auto"}}/>
                             <div id="navbarSupportedContent">
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                                 <Link to="/login">
@@ -35,7 +36,8 @@ export class Navbar extends React.Component {
                     </nav> :
                     <nav className="navbar navbar-expand-lg">
                         <div className="container-fluid">
-                            <img className="img-thumbnail" src="companyLogo.png" />
+                            <img className="img-thumbnail" src="companyLogo.png" 
+                                style={{width:"20%",display:"block",marginLeft:"auto",marginRight:"auto"}}/>
                             <div id="navbarSupportedContent">
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                                 <button onClick={this.props.darkmodeHandle}
