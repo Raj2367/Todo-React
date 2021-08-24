@@ -50,11 +50,11 @@ class Table extends React.Component {
                                 <tr key={index}>
                                     <td>{item.task}</td>
                                     <td>
-                                        <button id="markAsComplete" className="btn btn-outline-success" onClick={this.handleCompletedTask(index)}>Mark as Complete</button>                                        
+                                        <button id="markAsComplete" className="btn btn-outline-success" onClick={this.handleCompletedTask(index)}>Mark as Complete</button>
                                     </td>
                                     <td>
-                                        <button id="delete" className="btn btn-outline-danger" onClick={this.deleteTask(index)}>Delete</button>                                        
-                                    </td>                                    
+                                        <button id="delete" className="btn btn-outline-danger" onClick={this.deleteTask(index)}>Delete</button>
+                                    </td>
                                 </tr>
                             );
                         })}
