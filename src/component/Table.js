@@ -1,6 +1,6 @@
 import React from "react";
 
-// import "../css/Table.css";
+import "../css/Table.css";
 
 class Table extends React.Component {
 
@@ -48,7 +48,7 @@ class Table extends React.Component {
                         {items.map((item, index) => {
                             return (
                                 <tr key={index}>
-                                    <td>{item.task}</td>
+                                    <td>{item.task}</td>                                    
                                     <td>
                                         <button id="markAsComplete" 
                                             className="btn btn-success" 

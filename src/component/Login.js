@@ -84,8 +84,8 @@ class Login extends React.Component {
             darkmode={this.props.darkmode}
           />
           <br />
-          <div className="row">
-            <div id="incompleteTask" className="col-6 p-3 border">
+          <div>
+            <div id="incompleteTask" className="col-12 p-1 border">
               {/**
                * Table component for displaying all the incomplete tasks
                */}
@@ -96,7 +96,7 @@ class Login extends React.Component {
                 setStateOfPendingTask={this.setStateOfPendingTask}
               />
             </div>
-            <div id="completeTask" className="col-6 p-3 border">
+            <div id="completeTask" className="col-12 p-3 border">
               {/**
                * Completed task component for displaying all the completed tasks
                */}
