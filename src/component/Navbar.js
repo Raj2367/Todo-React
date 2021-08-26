@@ -3,55 +3,49 @@ import { Link } from "react-router-dom";
 import { isAuth } from "../Auth";
 import { BiAdjust } from "react-icons/bi";
 
-export class Navbar extends React.Component {
+import '../css/Navbar.css';
 
-    render() {
-        const condition = this.props.darkmode;
-        return (
-            <div>
-                {isAuth() ?
-                    <nav className="navbar navbar-expand-lg">
-                        <div className="container-fluid">
-                            <img className="img-thumbnail" src="companyLogo.png" 
-                                 style={{width:"20%",display:"block",marginLeft:"auto",marginRight:"auto"}}/>
-                            <div id="navbarSupportedContent">
-                                <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                                <Link to="/login">
-                                    <input {...(condition ?
+export const Navbar = (props) => {
+    const condition = props.darkmode;
+    return (
+        <div>
+            {isAuth() ?               
+                    <div>
+                        <img className="img-thumbnail" src="companyLogo.png" />
+                        <div className="button">    
+                            <button id="button1" onClick={props.darkmodeHandle}
+                                {...(condition ?
+                                    { style: { color: "white", borderRadius: "25px", backgroundColor: "black" } } :
+                                    { style: { color: "black", borderRadius: "25px" } }
+                                )}>
+                                <BiAdjust />
+                            </button> &nbsp;
+                        </div>
+                            <Link to="/login">
+                                <input className="button" 
+                                    {...(condition ?
                                         { className: "btn btn-success" } :
                                         { className: "btn btn-outline-success" })}
-                                        type="button"
-                                        value={this.props.logedin ? "logout" : "login"}
-                                        onClick={this.props.loginHandle} />
-                                </Link> &nbsp;
-                                <button onClick={this.props.darkmodeHandle}
-                                    {...(condition ?
-                                        { style: { color: "white", fontSize: "30px", borderRadius: "25px", backgroundColor: "black" } } :
-                                        { style: { color: "black", fontSize: "30px", borderRadius: "25px" } }
-                                    )}>
-                                    <BiAdjust />
-                                </button>
-                            </div>
+                                    type="button"
+                                    value={props.logedin ? "logout" : "login"}
+                                    onClick={props.loginHandle} />
+                            </Link>                                                   
+                    </div>:                
+                    <div>                        
+                        <img className="img-thumbnail" src="companyLogo.png" />                        
+                        <div className="button">                            
+                            <button id="button1" onClick={props.darkmodeHandle}
+                                {...(condition ?
+                                    { style: { color: "white", borderRadius: "25px", backgroundColor: "black" } } :
+                                    { style: { color: "black", borderRadius: "25px" } }
+                                )}>
+                                <BiAdjust />
+                            </button>
                         </div>
-                    </nav> :
-                    <nav className="navbar navbar-expand-lg">
-                        <div className="container-fluid">
-                            <img className="img-thumbnail" src="companyLogo.png" 
-                                style={{width:"20%",display:"block",marginLeft:"auto",marginRight:"auto"}}/>
-                            <div id="navbarSupportedContent">
-                                <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                                <button onClick={this.props.darkmodeHandle}
-                                    {...(condition ?
-                                        { style: { color: "white", fontSize: "30px", borderRadius: "25px", backgroundColor: "black" } } :
-                                        { style: { color: "black", fontSize: "30px", borderRadius: "25px" } }
-                                    )}>
-                                    <BiAdjust />
-                                </button>
-                            </div>
-                        </div>
-                    </nav>
-                }
-            </div>
-        );
-    }
+                    </div>
+            }
+        </div>
+    );
 }
+
+//width:"20%",display:"block",marginLeft:"auto",marginRight:"auto"

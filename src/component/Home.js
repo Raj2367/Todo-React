@@ -53,13 +53,15 @@ class Home extends React.Component {
                             placeholder="Password"/>
                     </div>
                     <br />
-                    <Link to="/login">
-                        <button type="submit"
-                            className="btn btn-primary"
-                            onClick={this.props.loginHandle}>
-                            Login
-                        </button>
-                    </Link>
+                    <div className="homebutton">
+                        <Link to="/login">
+                            <button type="submit"
+                                className="btn btn-primary"
+                                onClick={this.props.loginHandle}>
+                                Login
+                            </button>
+                        </Link>
+                    </div>
                 </form>
             </div>
         );
